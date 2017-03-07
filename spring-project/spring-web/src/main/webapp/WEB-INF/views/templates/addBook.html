@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Adding book</title>
+</head>
+<body>
+	<h2>Register book</h2>
+	<p>Enter book details:</p>
+	<form action="#" th:action="@{/library/book/addBook}" th:object="${book}"
+		method="post">
+		<table border="1">
+			<tr>
+				<td><label th:text="#{form.book.isbn}" /></td>
+				<td><input type="text" th:field="*{isbn}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{form.book.title}" /></td>
+				<td><input type="text" th:field="*{title}" /></td>
+			</tr>
+			<tr>
+				<td><label th:text="#{form.book.date.publication}" /></td>
+				<td><input type="text" th:field="*{date_of_publication}" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

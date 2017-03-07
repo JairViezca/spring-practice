@@ -1,0 +1,2 @@
+com\accenture\dao\repository\BookRepository.class
+com\accenture\config\PersistenceJPAConfig.class

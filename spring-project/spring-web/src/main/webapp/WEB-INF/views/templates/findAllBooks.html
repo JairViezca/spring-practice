@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Find All Books</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td th:text="#{library.books.title}" />
+		</tr>
+		<tr th:each="book: ${books}">
+			<td th:text="${book.title}" />
+		</tr>
+	</table>
+</body>
+</html>

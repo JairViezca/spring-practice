@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Find Book By Title</title>
+</head>
+<body>
+	<h2>Find books by Title</h2>
+	<table>
+		<tr>
+			<td th:text="#{book.isbn}" />
+			<td th:text="#{book.title}" />
+			<td th:text="#{book.date.publication}" />
+		</tr>
+		<tr th:each="book: ${books}">
+			<td th:text="${book.isbn}" />
+			<td th:text="${book.title}" />
+			<td th:text="${book.date_of_publication}" />
+		</tr>
+	</table>
+</body>
+</html>
